@@ -2,15 +2,13 @@
 
 This project is based on a Frontend Mentor challenge and is designed to practice fetching data from APIs.
 
-## API Used
+### API Used
 
 This project uses the [Advice Slip API](https://api.adviceslip.com) to fetch random pieces of advice.
 
 ### Built with
 
 - CSS, TypeScript, React
-
-  This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db).
 
 ### Workflow
 
