@@ -1,6 +1,6 @@
 # Advice Generator App
 
-This project is based on a Frontend Mentor challenge and is designed to practice fetching data from APIs.
+This project is based on a [Frontend Mentor](https://www.frontendmentor.io) challenge and is designed to practice fetching data from APIs.
 
 ### API Used
 

@@ -4,7 +4,7 @@ import "./Quotebox.css";
 const Quotebox = () => {
   const [quote, setQuote] = useState<string>("");
 
-  // Neue Funktion für das Abrufen eines Zitats (Arrow Function)
+  // arrrow function für rendern eines random quote
   const fetchNewQuote = () => {
     fetch("https://api.adviceslip.com/advice")
       .then((response) => response.json())
@@ -22,7 +22,7 @@ const Quotebox = () => {
   return (
     <div className="quotebox">
       <h1>Quote of the Day</h1>
-      <p>{quote}</p>
+      <p>{`"${quote}"`}</p>
       {/* Pattern Divider */}
       <img
         src="/images/pattern-divider-mobile.svg"

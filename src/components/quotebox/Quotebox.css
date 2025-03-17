@@ -1,15 +1,15 @@
 body {
-  background-color: #2c2c2c; /* Dunkles Anthrazit für den Hintergrund */
+  background-color: #2c2c2c;
   font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
 }
 
 .quotebox {
-  max-width: 90%; /* Mobile Ansicht */
+  max-width: 90%; /* Mobile */
   margin: 20px auto;
   padding: 15px;
-  background-color: #7d7d7d; /* Mittleres Grau für die Karte */
+  background-color: #7d7d7d;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -19,65 +19,74 @@ body {
 
 .quotebox h1 {
   font-size: 1.5em; /* Mobile */
-  color: #90ee90; /* Hellgrün für die Überschrift */
+  color: #90ee90;
   margin-bottom: 10px;
 }
 
 .quotebox p {
   font-size: 1.2em; /* Mobile */
-  color: #add8e6; /* Hellblau für das Zitat */
+  color: #add8e6;
   font-style: italic;
 }
 
 .dice-icon-wrapper {
   position: absolute;
-  bottom: -30px; /* Kreis halb auf Karte, halb darunter */
+  bottom: -40px; /* Abstand zur unteren Kante */
   left: 50%;
   transform: translateX(-50%);
-  width: 70px; /* Größe des Kreises */
-  height: 70px;
-  background-color: #90ee90; /* Gleiche Farbe wie die Überschrift */
+  width: 50px; /* Größe des Kreises */
+  height: 50px;
+  background-color: #90ee90;
   border-radius: 50%; /* Kreisform */
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer; /* Zeigt an, dass das Element klickbar ist */
-}
+  cursor: pointer;
 
-.dice-icon {
-  width: 40px; /* Würfelgröße */
-  height: 40px;
-}
-
-/* Dynamisches Pattern Divider */
-.pattern-divider {
-  width: 100%;
-  margin: 20px 0;
-}
-
-/* Media Queries für größere Bildschirme */
-@media (min-width: 1024px) {
-  .quotebox {
-    max-width: 600px; /* Größer für Laptop */
-    padding: 30px; /* Mehr Platz */
-    margin: 40px auto;
-    border-radius: 15px;
+  .dice-icon {
+    width: 30px; /* Würfelgröße */
+    height: 30px;
   }
 
-  .quotebox h1 {
-    font-size: 2em; /* Größere Schrift */
-    margin-bottom: 20px;
-  }
-
-  .quotebox p {
-    font-size: 1.4em; /* Größere Schrift */
-  }
-}
-
-/* dynamisches Pattern Divider für Desktop-Ansicht: Wenn die Bildschirmbreite 1024px oder größer ist, ersetzt die CSS-Eigenschaft content das Bild durch das Desktop Pattern Divider (pattern-divider-desktop.svg).
- className="pattern-divider" verwenden, ohne zusätzliche Logik in TS hinzuzufügen. */
-@media (min-width: 1024px) {
+  /* Dynamisches Pattern Divider */
   .pattern-divider {
-    content: url("/images/pattern-divider-desktop.svg");
+    margin-bottom: 30px;
+  }
+
+  /* Media Queries für größere Bildschirme */
+  @media (min-width: 1024px) {
+    .quotebox {
+      max-width: 600px;
+      padding: 30px;
+      margin: 40px auto;
+      border-radius: 15px;
+    }
+
+    .quotebox h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .quotebox p {
+      font-size: 1.4em;
+    }
+
+    .dice-icon-wrapper {
+      width: 70px; /* Größere Größe für Desktop */
+      height: 70px;
+      bottom: -60px; /* Mehr Abstand zur unteren Kante */
+    }
+
+    .dice-icon {
+      width: 40px; /* Größere Würfelgröße für Desktop */
+      height: 40px;
+    }
+
+    /* dynamisches Pattern Divider für Desktop-Ansicht: Wenn die Bildschirmbreite 1024px oder größer ist, ersetzt die CSS-Eigenschaft content das Bild durch das Desktop Pattern Divider (pattern-divider-desktop.svg).
+ className="pattern-divider" verwenden, ohne zusätzliche Logik in TS hinzuzufügen. */
+    .pattern-divider {
+      margin-bottom: 50px; /* Abstand anpassen */
+      content: url("/images/pattern-divider-desktop.svg");
+    }
   }
 }
