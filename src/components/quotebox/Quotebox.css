@@ -1,0 +1,83 @@
+body {
+  background-color: #2c2c2c; /* Dunkles Anthrazit für den Hintergrund */
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.quotebox {
+  max-width: 90%; /* Mobile Ansicht */
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #7d7d7d; /* Mittleres Grau für die Karte */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  overflow: visible;
+}
+
+.quotebox h1 {
+  font-size: 1.5em; /* Mobile */
+  color: #90ee90; /* Hellgrün für die Überschrift */
+  margin-bottom: 10px;
+}
+
+.quotebox p {
+  font-size: 1.2em; /* Mobile */
+  color: #add8e6; /* Hellblau für das Zitat */
+  font-style: italic;
+}
+
+.dice-icon-wrapper {
+  position: absolute;
+  bottom: -30px; /* Kreis halb auf Karte, halb darunter */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px; /* Größe des Kreises */
+  height: 70px;
+  background-color: #90ee90; /* Gleiche Farbe wie die Überschrift */
+  border-radius: 50%; /* Kreisform */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; /* Zeigt an, dass das Element klickbar ist */
+}
+
+.dice-icon {
+  width: 40px; /* Würfelgröße */
+  height: 40px;
+}
+
+/* Dynamisches Pattern Divider */
+.pattern-divider {
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* Media Queries für größere Bildschirme */
+@media (min-width: 1024px) {
+  .quotebox {
+    max-width: 600px; /* Größer für Laptop */
+    padding: 30px; /* Mehr Platz */
+    margin: 40px auto;
+    border-radius: 15px;
+  }
+
+  .quotebox h1 {
+    font-size: 2em; /* Größere Schrift */
+    margin-bottom: 20px;
+  }
+
+  .quotebox p {
+    font-size: 1.4em; /* Größere Schrift */
+  }
+}
+
+/* dynamisches Pattern Divider für Desktop-Ansicht: Wenn die Bildschirmbreite 1024px oder größer ist, ersetzt die CSS-Eigenschaft content das Bild durch das Desktop Pattern Divider (pattern-divider-desktop.svg).
+ className="pattern-divider" verwenden, ohne zusätzliche Logik in TS hinzuzufügen. */
+@media (min-width: 1024px) {
+  .pattern-divider {
+    content: url("/images/pattern-divider-desktop.svg");
+  }
+}
